@@ -11,20 +11,24 @@ oi
 </div>
 
 <script>
+function success(itens) {
+	$('#content').html("<ul>");
+	itens = itens.query.results["Result"];
+	console.log(itens);
+	for(var i = 1; i < itens.length; i++) {
+		item = itens[i];
+		console.log(item);
+		
+		$('#content').append("<li><a href=\"" + item["Url"] + "\">" + item["Title"] + "</a></li>");
+	}
+	$('#content').append("</ul>");
+}
+
 	site = "http://blog.caelum.com.br"
-	uri = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20search.siteexplorer.inlinks%20where%20query%3D%22" + site + "%22&format=json&callback=cbfunc"
+	uri = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20search.siteexplorer.inlinks%20where%20query%3D%22" + site + "%22&format=json&callback=success"
 	$.ajax({
 		url: uri,
 		type: "GET",
-		success: function(itens) {
-			$('#content').html("");
-			console.log("ha!");
-			console.log(itens);
-			for(var i = 1; i < itens.length; i++) {
-				item = itens[i];
-				$('#content').append("<a href=\"" + item[""] + "\">" + item["Title"] + "</a>");
-			}
-		}
 	});
 
 </script>
