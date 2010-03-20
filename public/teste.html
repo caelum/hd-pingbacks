@@ -13,6 +13,8 @@ oi
 <script>
 	site = "http://blog.caelum.com.br"
 	uri = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20search.siteexplorer.inlinks%20where%20query%3D%22" + site + "%22&format=json&callback=cbfunc"
+	uri = escape(uri)
+	uri = "http://hackping.caelum.com.br/?uri=" + uri
 	$.ajax({
 		url: uri,
 		type: "GET",
