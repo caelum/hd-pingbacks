@@ -3,33 +3,26 @@
 <html>
 <head>
 	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="hacked-pingbacks-0.1.js"></script>
 </head>
-oi
 
-
-<div id="content">
-</div>
+<div id="content"></div>
+<div id="content2"></div>
 
 <script>
-function success(itens) {
-	$('#content').html("<ul>");
+
+function own_callback(itens) {
+	$('#content2').html("<ul>");
 	itens = itens.query.results["Result"];
-	console.log(itens);
 	for(var i = 1; i < itens.length; i++) {
 		item = itens[i];
-		console.log(item);
-		
-		$('#content').append("<li><a href=\"" + item["Url"] + "\">" + item["Title"] + "</a></li>");
+		$('#content2').append("<li>" + item["Title"] + "</li>");
 	}
-	$('#content').append("</ul>");
+	$('#content2').append("</ul>");
 }
 
-	site = "http://blog.caelum.com.br"
-	uri = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20search.siteexplorer.inlinks%20where%20query%3D%22" + site + "%22&format=json&callback=success"
-	$.ajax({
-		url: uri,
-		type: "GET",
-	});
+hacked_pingbacks.on("http://www.caelum.com.br").fill();
+hacked_pingbacks.on("http://www.caelum.com.br").fill({ "callback" : "own_callback" } );
 
 </script>
 
