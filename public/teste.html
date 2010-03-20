@@ -13,38 +13,19 @@ oi
 <script>
 	site = "http://blog.caelum.com.br"
 	uri = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20search.siteexplorer.inlinks%20where%20query%3D%22" + site + "%22&format=json&callback=cbfunc"
-	uri = escape(uri)
-	uri = "http://hackping.caelum.com.br/?uri=" + uri
 	$.ajax({
 		url: uri,
 		type: "GET",
 		success: function(itens) {
-			alert(itens);
+			$('#content').html("");
+			console.log("ha!");
+			console.log(itens);
+			for(var i = 1; i < itens.length; i++) {
+				item = itens[i];
+				$('#content').append("<a href=\"" + item[""] + "\">" + item["Title"] + "</a>");
+			}
 		}
 	});
-	// auth = make_basic_auth('guilherme.silveira', '102gs2010')
-	// $.ajax({
-	   // type: "GET",
-	   // url: uri,
-	   // dataType: "json",
-	// beforeSend: function(req) {
-	// 	req.setRequestHeader('Authorization', auth)
-	// }
-			// username: "guilherme.silveira",
-			// password: "102gs2010",
-			// success: function(itens) {
-				// alert(itens);
-				// for(var i in itens) {
-					// alert(i);
-					//itens[i]
-					// $('#content').append('chocolate');
-				// }
-			// },
-			// error: function(x) {
-				// alert("failed");
-			// }
-	 // });
-	
 
 </script>
 
