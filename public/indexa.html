@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+</head>
+oi
+
+
+<div id="content">
+</div>
+
+<script>
+	site = "http://blog.caelum.com.br"
+	uri = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20search.siteexplorer.inlinks%20where%20query%3D%22" + site + "%22&format=json&callback=cbfunc"
+	$.ajax({
+		url: uri,
+		type: "GET",
+		success: function(itens) {
+			alert(itens);
+		}
+	});
+	// auth = make_basic_auth('guilherme.silveira', '102gs2010')
+	// $.ajax({
+	   // type: "GET",
+	   // url: uri,
+	   // dataType: "json",
+	// beforeSend: function(req) {
+	// 	req.setRequestHeader('Authorization', auth)
+	// }
+			// username: "guilherme.silveira",
+			// password: "102gs2010",
+			// success: function(itens) {
+				// alert(itens);
+				// for(var i in itens) {
+					// alert(i);
+					//itens[i]
+					// $('#content').append('chocolate');
+				// }
+			// },
+			// error: function(x) {
+				// alert("failed");
+			// }
+	 // });
+	
+
+</script>
+
+</html>
