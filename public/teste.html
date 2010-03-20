@@ -21,8 +21,11 @@ function own_callback(itens) {
 	$('#content2').append("</ul>");
 }
 
-hacked_pingbacks.on("http://www.caelum.com.br").fill();
-hacked_pingbacks.on("http://www.caelum.com.br").fill({ "callback" : "own_callback" } );
+$(function(){
+	hacked_pingbacks.on("http://www.caelum.com.br").fill();
+	hacked_pingbacks.on("http://www.caelum.com.br").fill({ "callback" : own_callback } );
+	});
+
 
 </script>
 
