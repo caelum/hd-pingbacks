@@ -91,3 +91,74 @@ ArgumentError (HTTP request path is empty):
 Rendered rescues/_trace (44.2ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing DucksController#index (for 127.0.0.1 at 2010-03-20 10:45:49) [GET]
+  Parameters: {"uri"=>"http://www.google.com/"}
+Completed in 327ms (View: 1, DB: 0) | 200 OK [http://localhost/?uri=http://www.google.com/]
+
+
+Processing DucksController#index (for 127.0.0.1 at 2010-03-20 10:46:05) [GET]
+  Parameters: {"uri"=>"http://www.google.com"}
+Completed in 298ms (View: 1, DB: 0) | 200 OK [http://localhost/?uri=http://www.google.com]
+
+
+Processing DucksController#index (for 127.0.0.1 at 2010-03-20 10:46:15) [GET]
+  Parameters: {"uri"=>"http://www.google.com/?q=gui"}
+Completed in 382ms (View: 1, DB: 0) | 200 OK [http://localhost/?uri=http://www.google.com/?q=gui]
+
+
+Processing DucksController#index (for 127.0.0.1 at 2010-03-20 10:46:20) [GET]
+  Parameters: {"uri"=>"http://www.google.com.br/?q=gui"}
+Completed in 1543ms (View: 1, DB: 0) | 200 OK [http://localhost/?uri=http://www.google.com.br/?q=gui]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-20 10:46:22) [GET]
+
+ActionController::RoutingError (No route matches "/intl/pt-BR_br/images/logo.gif" with {:method=>:get}):
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-20 10:46:22) [GET]
+
+ActionController::RoutingError (No route matches "/extern_js/f/CgVwdC1CUhICYnIgACswCjheQB0sKzAOOAwsKzAWOBcsKzAXOAYsKzAYOAUsKzAZOBksKzAlOMqIASwrMCY4CSwrMCc4BCwrMDw4AiwrMEA4DCwrMEQ4AiwrMEU4ASw/4fFWkcnWqgc.js" with {:method=>:get}):
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-20 10:46:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/nav_logo8.png" with {:method=>:get}):
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/guilherme/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
